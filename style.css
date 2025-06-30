@@ -1,0 +1,237 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: linear-gradient(135deg, #ffffff, #ffd1dc, #ff08de);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .heart{
+        position: absolute;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+        animation: float 6s ease-in-out infinite;
+        pointer-events: none;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6;}
+        50% { transform: translateY(-70px) rotate(20deg); opacity: 1;}
+    }
+    
+    .container {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 25px;
+        padding: 50px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.29);
+        text-align: center;
+        max-width: 550px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+    }
+    
+    h1 {
+        color: #d63384;
+        font-size: 2.5em;
+        margin: 0 0 15px 0;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .subtitle {
+        color: #6c757d;
+        font-size: 1.2em;
+        margin: 0 0 20px 0;
+    }
+    
+    .music-controls {
+        margin: 0 0 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .music-btn {
+        background: linear-gradient(145deg, #ff69b4, #ff1493);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: #ffffff;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    }
+    
+    .music-btn:hover {
+        transform: scale(1.2);
+        box-shadow: 0 6px 20px rgba(255, 20, 147, 0.3);
+    }
+    
+    .music-info {
+        font-size: 1em;
+        color: #d63384;
+        font-weight: bold;
+    }
+    
+    .rating-section {
+        margin: 30px 0;
+    }
+    
+    .rating-title {
+        font-size: 1.4em;
+        color: #495057;
+        margin: 0 0 20px 0;
+    }
+    
+    .rating-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 0 0 30px 0;
+    }
+    
+    .rating-btn {
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        border: 2px solid #dee2e6;
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    
+    .rating-btn:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .rating-btn.selected {
+        background: linear-gradient(145deg, #ff69b4, #ff1493);
+        color: #ffffff;
+        border-color: #ff1493;
+        transform: scale(1.05);
+    }
+    
+    .response-area {
+        min-height: 200px;
+        background: rgba(255, 240, 245, 0.8);
+        border-radius: 20px;
+        padding: 25px;
+        transition: all 0.5s ease;
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .response-area.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .response-message {
+        font-size: 1.3em;
+        line-height: 1.6;
+        color: #495057;
+    }
+    
+    .emoji {
+        font-size: 2em;
+        margin: 10px 0;
+    }
+    
+    .suggestions {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0 0 0;
+        text-align: left;
+    }
+    
+    .suggestions h3 {
+        color: #d63384;
+        margin: 0 0 15px 0;
+    }
+    
+    .suggestions ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .suggestions li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(214, 51,132, 0.2);
+    }
+    
+    .suggestions li::before {
+        content: "💕";
+        margin: 0 0 0 8px;
+    }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .rating-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .rating-btn {
+        padding: 12px 8px;
+        font-size: 0.95em;
+    }
+    
+    .music-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .music-info {
+        font-size: 0.8em;
+    }
+    
+    .response-message {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+            
+    .heart {
+    font-size: 16px;
+    }
+    }
