@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕Your Daily Care💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/CIAAA/iconci.png" type="png">
+</head>
+<body>
+    
+    <div class="heart" style="top: 10%; left: 10%;">💞</div>
+    <div class="heart" style="top: 20%; left: 15%; animation-delay: 1s;">💕</div>
+    <div class="heart" style="top: 60%; left: 5%; animation-delay: 2s;" >💖</div>
+    <div class="heart" style="top: 70%; left: 22%; animation-delay: 3s;">💝</div>
+    <div class="heart" style="top: 40%; left: 10%; animation-delay: 4s;">💗</div>
+
+    <div class="container">
+        <h1 >💕Your Daily Care💕</h1>
+        <p class="subtitle">🌸How was your day, beautiful?🌸</p>
+
+        <div class="music-controls">
+            <button class="music-btn" id="playBtn" title="Play Music">🎶</button>
+            <div class="music-info" id="musicInfo">Click to play music</div>
+            <button class="music-btn" id="stopBtn" title="Stop music" style="display: none;">⏹️</button>
+        </div>
+
+        <div class="rating-section">
+            <div class="rating-title">Rate your mood today (1 = worst, 8 = best)</div>
+            <div class="rating-buttons">
+                <button class="rating-btn"data-rating="1">1<br>🤬</button>
+                <button class="rating-btn"data-rating="2">2<br>😒</button>
+                <button class="rating-btn"data-rating="3">3<br>😔</button>
+                <button class="rating-btn"data-rating="4">4<br>😕</button>
+                <button class="rating-btn"data-rating="5">5<br>🙁</button>
+                <button class="rating-btn"data-rating="6">6<br>🙂</button>
+                <button class="rating-btn"data-rating="7">7<br>😊</button>
+                <button class="rating-btn"data-rating="8">8<br>😁</button>
+            </div>
+        </div>
+
+        <div class="response-area" id="responseArea">
+            <div class="emoji" id="responseEmoji"></div>
+            <div class="response-message" id="responseMessage"></div>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" src="/CIAAA/EVERYTHING.mp3" loop></audio>
+    <script src="index.js"></script>
+</body>
+</html>
