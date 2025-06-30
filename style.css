@@ -21,6 +21,7 @@
         font-size: 20px;
         animation: float 6s ease-in-out infinite;
         pointer-events: none;
+        display: inline;
     }
     
     @keyframes float {
@@ -113,7 +114,7 @@
     }
     
     .rating-btn:hover {
-        transform: translateY(-20px);
+        transform: translateY(-5px);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
     
@@ -218,20 +219,138 @@
     }
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .rating-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .music-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .music-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3em;
+    }
+
+    .response-area {
+        padding: 20px;
+    }
+
+    .response-message {
+        font-size: 1.1em;
+    }
+
+    .suggestions li {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .rating-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .rating-btn {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .music-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .music-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .music-info {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .response-message {
+        font-size: 1em;
+    }
+
+    .suggestions {
+        padding: 15px;
+    }
+
+    .suggestions li {
+        font-size: 0.9em;
+    }
+}
+
 @media (max-width: 400px) {
     .container {
         padding: 15px;
     }
-    
+
     h1 {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
-    
+
     .subtitle {
+        font-size: 0.95em;
+    }
+
+    .rating-btn {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .music-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1em;
+    }
+
+    .music-info {
+        font-size: 0.8em;
+    }
+
+    .response-message {
+        font-size: 0.95em;
+    }
+
+    .suggestions h3 {
         font-size: 1em;
     }
-            
+
+    .suggestions li {
+        font-size: 0.85em;
+    }
+
     .heart {
-    font-size: 16px;
+        font-size: 14px;
     }
-    }
+}
