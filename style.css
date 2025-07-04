@@ -22,6 +22,7 @@
         animation: float 6s ease-in-out infinite;
         pointer-events: none;
         display: inline;
+        z-index: 100;
     }
     
     @keyframes float {
