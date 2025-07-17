@@ -12,6 +12,8 @@ let audioContext;
 let oscillator;
 let gainNode;
 let isPLaying = false;
+let username;
+
 
 const responses = {
     1: {
@@ -111,6 +113,13 @@ const responses = {
         ]
     }
 };
+
+document.getElementById("op-submit").onclick = function() {
+    username = document.getElementById("op-input").value;
+    document.getElementById("cont-sub").textContent = `Hello ${username} how was your day? 💗`;
+    document.getElementById("container").style = ` display: block;`
+    document.getElementById("op-cont").style = `display: none;`
+}
 
 playBtn.addEventListener('click', () => {
     bgMusic.play();
