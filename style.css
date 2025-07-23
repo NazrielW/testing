@@ -5,7 +5,7 @@
     }
     
     body {
-        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-family: 'Comic Sans MS';
         background: linear-gradient(135deg, #ffffff, #ffd1dc, #ff08de);
         min-height: 100vh;
         display: flex;
@@ -39,7 +39,7 @@
         padding: 1vh;
         border-radius: 9px;
         font-size: 3vh;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-family: 'Comic Sans MS';
         text-align: center;
     }
 
